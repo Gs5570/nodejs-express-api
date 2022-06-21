@@ -15,7 +15,8 @@ const morgan = require('morgan');
 
 //import helmet (add alayer of security in the headers)
 const helmet = require('helmet');
-
+// import env & init dotrenv
+require("dotenv").config();
 
 
 //midleware
@@ -26,8 +27,7 @@ app.use(helmet());
 
 PORT = process.env.PORT || 3000;
 
-// import env & init dotrenv
-require("dotenv").config();
+
 
 //import mongoDBconfig to connect to DB
 const mongoDBConfig = require('./config/mongoDB')
