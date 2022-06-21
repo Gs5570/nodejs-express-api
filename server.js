@@ -24,7 +24,7 @@ app.use(morgan('dev'));
 app.use(helmet());
 
 
-PORT = 3000;
+PORT = process.env.PORT || 3000;
 
 // import env & init dotrenv
 require("dotenv").config();
